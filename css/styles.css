@@ -26,7 +26,12 @@ body {
   font-family: "Vazir", sans-serif;
   margin: 0;
   padding: 0;
-  background: darkturquoise;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.75)), url("../images/hospital2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-color: black;
 }
 
 a,
@@ -103,12 +108,12 @@ li {
 
 .title {
   margin: 30px 40px 10px 0;
-  color: #1a1a1a;
+  color: #ffffff;
 }
 
 .s-title {
   margin: 30px 30px 15px 0;
-  color: #1a1a1a;
+  color: #fff;
 }
 
 /* Schedule Table */
@@ -120,7 +125,11 @@ li {
   padding: 20px 0;
   overflow-x: auto; /* اسکرول افقی روی موبایل بدون بیرون زدن از صفحه */
   -webkit-overflow-scrolling: touch;
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid #fff;
+}
+
+.table-image {
+  border: 1px solid black;
 }
 
 .table {
@@ -154,7 +163,6 @@ li {
   max-width: 1200px;
   margin: 0 auto 40px auto;
 }
-
 
 /* استایل مشترک تمام کارت‌ها */
 .in-menu section {
