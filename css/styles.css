@@ -153,6 +153,7 @@ li {
 }
 
 /* Cards Section */
+.menu-plan,
 .in-menu {
   display: flex;
   flex-wrap: wrap;
@@ -165,6 +166,7 @@ li {
 }
 
 /* استایل مشترک تمام کارت‌ها */
+.sec,
 .in-menu section {
   border-radius: 25px;
   border: 2px solid indigo;
@@ -193,6 +195,7 @@ li {
   width: 100%;
 }
 
+.sec-image,
 .in-menu section img {
   width: 140px;
   height: 140px;

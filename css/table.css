@@ -1,0 +1,221 @@
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Fonts */
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/Vazir-Regular.woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/Vazir-Medium.woff2");
+  font-weight: 700;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Vazir", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-color: darkturquoise;
+}
+
+a,
+li {
+  text-decoration: none;
+  color: black;
+}
+
+/* Header Styling */
+#head {
+  background: whitesmoke;
+  border-radius: 50px;
+  border: 2px solid indianred;
+  display: flex;
+  align-items: center;
+  width: 95%;
+  max-width: 1200px;
+  margin: 15px auto 0 auto;
+  justify-content: space-between;
+  padding: 8px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#head .logo {
+  display: block;
+  width: 70px;
+  height: auto;
+}
+
+#head .items-list {
+  list-style-type: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+#head .items-list .item a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+#head .items-list .item a:hover {
+  color: purple;
+}
+
+#head .contact-us {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid black;
+  border-radius: 20px;
+  color: white;
+  background: purple;
+  padding: 8px 16px;
+  font-weight: bold;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+
+#head .contact-us:hover {
+  transform: scale(1.03);
+  background: #5c005c;
+}
+
+/* Main Content */
+.menu-list {
+  width: 100%;
+}
+
+.title {
+  margin: 30px 40px 10px 0;
+  color: #ffffff;
+}
+
+.s-title {
+  margin: 30px 30px 15px 0;
+  color: #fff;
+}
+
+/* Schedule Table */
+.menu-plan {
+  display: block;
+  width: 95%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px 0;
+  overflow-x: auto; /* اسکرول افقی روی موبایل بدون بیرون زدن از صفحه */
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-image {
+  border: 1px solid black;
+}
+
+.table {
+  background: cornsilk;
+  width: 100%;
+  min-width: 650px; /* حداقل عرض تا جدول در موبایل خوانا بماند */
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.table th,
+.table td {
+  border: 1px solid black;
+  padding: 12px 10px;
+  font-size: 0.95rem;
+}
+
+.table th {
+  background: #ffeaa7;
+  font-weight: bold;
+}
+
+/* =========================================
+   MEDIA QUERIES (تنظیمات تبلت و موبایل)
+   ========================================= */
+
+/* تبلت و موبایل‌های بزرگ (کمتر از 768px) */
+@media screen and (max-width: 768px) {
+  #head {
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 25px;
+    padding: 15px;
+  }
+
+  #head .items-list {
+    gap: 15px;
+    font-size: 0.95rem;
+  }
+
+  .title {
+    text-align: center;
+    margin: 25px 0 10px 0;
+    font-size: 1.6rem;
+  }
+
+  .s-title {
+    text-align: center;
+    margin: 25px 0 15px 0;
+    font-size: 1.4rem;
+  }
+
+  .foot .foot-menu {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .foot .foot-menu .describe,
+  .foot .foot-menu .contact {
+    width: 100%;
+  }
+}
+
+/* موبایل‌های کوچک‌تر (کمتر از 480px) */
+@media screen and (max-width: 480px) {
+  #head {
+    width: 92%;
+    padding: 12px;
+  }
+
+  #head .items-list {
+    flex-direction: row;
+    gap: 12px;
+    font-size: 0.85rem;
+  }
+
+  #head .contact-us {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .in-menu section {
+    width: 85%; /* در صفحات خیلی کوچک هر کارت به صورت تمام‌عرض و شکیل نمایش داده می‌شود */
+    max-width: 280px;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px 6px;
+    font-size: 0.82rem;
+  }
+}
